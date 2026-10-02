@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="معرض أعمال أحمد مبروك، مصمم واجهات وتجربة المستخدم.">
+  <title>أحمد مبروك — معرض الأعمال</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <span class="junction junction-top-left" aria-hidden="true"></span>
+    <span class="junction junction-top-middle" aria-hidden="true"></span>
+    <span class="junction junction-top-right" aria-hidden="true"></span>
+    <span class="junction junction-portrait-left" aria-hidden="true"></span>
+    <span class="junction junction-portrait-right" aria-hidden="true"></span>
+    <header class="topbar">
+      <div class="header-tools" dir="ltr">
+        <button class="tool-button theme-button" id="themeButton" type="button" aria-label="تفعيل الوضع الداكن" aria-pressed="false" hidden><span aria-hidden="true"><img src="assets/icons/moon-02.svg" width="20" height="20" alt=""></span></button>
+        <button class="tool-button language-button" id="languageButton" type="button" aria-label="Switch to English">English</button>
+      </div>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <button class="nav-tab" data-tab="about" type="button" aria-selected="false">عنــي</button>
+        <button class="nav-tab" data-tab="experience" type="button" aria-selected="false">الخبرات</button>
+        <button class="nav-tab is-active" data-tab="work" type="button" aria-selected="true">معرض الأعمال</button>
+      </nav>
+      <div class="availability"><span class="status-dot" aria-hidden="true"></span><span id="availabilityText">متاح للعمل</span></div>
+    </header>
+
+    <main class="content-grid">
+      <aside class="profile-panel" aria-label="الملف الشخصي">
+        <div class="portrait-box" id="portraitBox" tabindex="0" aria-label="صورة أحمد تتبع حركة الماوس في 15 اتجاهًا">
+          <img id="portraitImage" src="assets/frames/frame-r2-c3.png" width="1246" height="1266" alt="بورتريه أحمد مبروك" fetchpriority="high">
+        </div>
+        <div class="profile-content">
+          <div class="profile-heading"><h1 id="profileName">أحمد مبروك</h1><p id="profileRole">مصمم واجهة المستخدم</p></div>
+          <p class="profile-lede" id="profileLede">متخصص في تصميم المنتجات الرقمية المعقدة وواسعة النطاق. أركز على بناء أنظمة متكاملة وقابلة للتوسع، وتنظيم المنتجات كثيفة البيانات، مع تحقيق التوازن بين احتياجات المستخدم وأهداف المنتج وقابلية التنفيذ.</p>
+          <div class="stats" aria-label="إحصاءات العمل">
+            <div><strong>+5</strong><span id="yearsLabel">سنوات خبرة</span></div>
+            <div><strong>+60</strong><span id="projectsLabel">مشروع</span></div>
+            <div><strong>+16</strong><span id="sectorsLabel">قطاع</span></div>
+          </div>
+          <div class="profile-actions">
+            <a class="primary-action" id="messageLink" href="https://wa.me/201113949916" target="_blank" rel="noopener noreferrer">إرسال رسالة</a>
+            <a class="secondary-action" id="cvButton" href="https://drive.google.com/uc?export=download&amp;id=1cgX7XjNRgQP679iI-yyHkjdh6W9aFECn">تنزيل السيرة الذاتية <img src="assets/icons/download-02.svg" width="16" height="16" alt="" aria-hidden="true"></a>
+          </div>
+          <div class="contact-area">
+            <span class="contact-corner top-right" aria-hidden="true"></span><span class="contact-corner top-left" aria-hidden="true"></span><span class="contact-corner bottom-right" aria-hidden="true"></span><span class="contact-corner bottom-left" aria-hidden="true"></span>
+            <a class="email-link" href="mailto:ahmed@mabroukui.com"><img src="assets/icons/mail-01.svg" alt="" width="18" height="18"><span>ahmed@mabroukui.com</span></a>
+            <div class="socials" aria-label="روابط التواصل">
+              <a href="https://www.behance.net/a7medmabrok0" target="_blank" rel="noopener noreferrer" aria-label="Behance"><img src="assets/icons/Social Icons.svg" alt=""></a>
+              <a href="https://dribbble.com/a7medmabrok0" target="_blank" rel="noopener noreferrer" aria-label="Dribbble"><img src="assets/icons/Social Icons-1.svg" alt=""></a>
+              <a href="https://www.linkedin.com/in/a7medmabrok0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icons/Social Icons-2.svg" alt=""></a>
+              <a href="https://x.com/a7medmabrok0" target="_blank" rel="noopener noreferrer" aria-label="X"><img src="assets/icons/Social Icons-3.svg" alt=""></a>
+              <a href="https://www.instagram.com/a7medmabrok0/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="assets/icons/Social Icons-4.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="main-panel" aria-label="محتوى الموقع">
+        <div class="tab-panel work-panel is-visible" id="workPanel" role="tabpanel">
+          <div class="work-scroll" id="workScroll" tabindex="0" aria-label="الأعمال، مرر لعرض المشاريع">
+            <div class="project-list" id="projectList"></div>
+          </div>
+          <nav class="project-ruler" id="projectRuler" aria-label="الانتقال بين المشاريع">
+            <span class="ruler-progress" aria-hidden="true"></span>
+            <span class="ruler-position" aria-hidden="true"></span>
+            <span class="ruler-ticks" id="rulerTicks"></span>
+          </nav>
+        </div>
+        <div class="tab-panel info-panel" id="experiencePanel" role="tabpanel" hidden>
+          <div class="info-scroll">
+            <div class="info-inner" dir="rtl">
+              <span class="section-kicker">السيرة المهنية / 01</span>
+              <h2>الخبرات</h2>
+              <p class="info-intro">خبرة في تصميم تجارب ومنتجات رقمية تجمع بين وضوح الاستخدام واحتياجات العمل. النصوص هنا تجريبية لحين إضافة بيانات السيرة الذاتية النهائية.</p>
+              <div class="timeline">
+                <article><span>2022 — الآن</span><div><h3>مصمم منتجات أول</h3><p>تصميم أنظمة رقمية قابلة للتوسع، وتطوير تجارب استخدام للمنتجات المعقدة بالتعاون مع فرق المنتج والتطوير.</p></div></article>
+                <article><span>2020 — 2022</span><div><h3>مصمم واجهات وتجربة المستخدم</h3><p>تحويل متطلبات العمل إلى واجهات واضحة، وإعداد نماذج أولية واختبار مسارات الاستخدام.</p></div></article>
+                <article><span>2018 — 2020</span><div><h3>مصمم واجهات</h3><p>بناء واجهات ويب وتطبيقات، والمشاركة في إنشاء مكتبات مكونات متسقة.</p></div></article>
+              </div>
+              <h3 class="skills-heading">المهارات</h3>
+              <div class="skill-list"><span>UX Research</span><span>UI Design</span><span>Design Systems</span><span>Prototyping</span><span>Figma</span><span>Product Thinking</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-panel info-panel" id="aboutPanel" role="tabpanel" hidden>
+          <div class="info-scroll">
+            <article class="info-inner about-article" dir="rtl">
+              <span class="section-kicker">نبذة شخصية / 02</span>
+              <h2>عني</h2>
+              <p class="info-intro">مرحبًا، أنا أحمد. أحب تصميم تجارب رقمية تبدو بسيطة، حتى عندما تقف خلفها تفاصيل كثيرة.</p>
+              <p>أبدأ كل مشروع بفهم الناس الذين سيستخدمونه، وما يحتاجون إلى إنجازه فعلًا. بعدها أبحث عن لغة بصرية منظمة تساعدهم على الوصول إلى هدفهم بثقة ووضوح.</p>
+              <p>أهتم بالأنظمة التصميمية، والتفاصيل الصغيرة التي تجعل المنتج متماسكًا، وبالعمل القريب مع فرق التطوير حتى تتحول الفكرة إلى تجربة حقيقية.</p>
+              <p>هذا نص تجريبي قابل للتعديل عندما تجهز المقال النهائي.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
