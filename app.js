@@ -124,6 +124,10 @@ function updatePortrait() {
   lastFrameKey = key;
 }
 
+
+
+
+
 function animatePortrait() {
   const amount = reducedMotion ? 1 : 0.18;
   pointerCurrent.x += (pointerTarget.x - pointerCurrent.x) * amount;
@@ -163,6 +167,10 @@ document.querySelector('#portraitBox').addEventListener('keydown', event => {
   queuePortrait();
 });
 
+
+
+
+
 const tabs = document.querySelectorAll('.nav-tab');
 const panels = {
   work: document.querySelector('#workPanel'),
@@ -189,6 +197,8 @@ themeButton.addEventListener('click', () => {
   themeButton.setAttribute('aria-label', dark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن');
   themeButton.querySelector('span').innerHTML = dark ? '<img src="assets/icons/sun-03.svg" width="20" height="20" alt="">' : '<img src="assets/icons/moon-02.svg" width="20" height="20" alt="">';
 });
+
+
 
 let english = false;
 const translations = {
